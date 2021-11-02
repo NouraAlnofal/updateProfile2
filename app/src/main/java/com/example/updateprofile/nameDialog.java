@@ -9,8 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 
-
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
 public class nameDialog extends AppCompatDialogFragment {
@@ -25,7 +23,7 @@ public class nameDialog extends AppCompatDialogFragment {
 
         builder.setView(view)
                 .setTitle("Name")
-                .setNegativeButton("cancle", new DialogInterface.OnClickListener() {
+                .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int i) {
 

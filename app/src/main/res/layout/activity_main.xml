@@ -61,7 +61,7 @@
             android:layout_height="45dp"
             android:ems="6"
             android:inputType="textPersonName"
-            android:text="Bitrhday"
+            android:text="Birthday"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.052"

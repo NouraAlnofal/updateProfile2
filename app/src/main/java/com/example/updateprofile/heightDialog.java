@@ -7,11 +7,8 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.NumberPicker;
 
-
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
 public class heightDialog extends AppCompatDialogFragment {
@@ -51,14 +48,11 @@ public class heightDialog extends AppCompatDialogFragment {
             }
         });
 
-        /*
-        eHeightfit=view.findViewById(R.id.heightPicker);
-        eHeightfit.setMinValue(130);
-        eHeightfit.setMaxValue(195);*/
+
 
         builder.setView(view)
                 .setTitle("Height")
-                .setNegativeButton("cancle", new DialogInterface.OnClickListener() {
+                .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int i) {
 

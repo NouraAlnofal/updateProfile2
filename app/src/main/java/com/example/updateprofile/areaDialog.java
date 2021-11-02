@@ -5,15 +5,8 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatDialogFragment;
-
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
 
@@ -39,11 +32,11 @@ public class areaDialog extends AppCompatDialogFragment {
                     @Override
                     public void onClick(DialogInterface dialog, int which, boolean isChecked) {
                         checkedAreas[which]=isChecked;
-                        String curr=aList.get(which);
+
 
                     }
                 })
-                .setNegativeButton("cancle", new DialogInterface.OnClickListener() {
+                .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int i) {
 
@@ -57,6 +50,8 @@ public class areaDialog extends AppCompatDialogFragment {
                     boolean checked=checkedAreas[i];
                     if(checked){
                         eFocusArea.setText(aList.get(i)+" ");
+                    }else {
+                        //("you must choose one at least");
                     }
 
                 }

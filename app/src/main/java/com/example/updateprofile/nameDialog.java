@@ -32,8 +32,12 @@ public class nameDialog extends AppCompatDialogFragment {
             @Override
             public void onClick(DialogInterface dialog, int i) {
                 String name=eName.getText().toString();
-                listener.applyNameText(name);
+                if(name.equals("") || name==null){
+                    //error message ("the name should only contains letters");
 
+                } else {
+                    listener.applyNameText(name);
+                }
 
             }
         });

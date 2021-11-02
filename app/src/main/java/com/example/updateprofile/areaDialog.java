@@ -49,9 +49,9 @@ public class areaDialog extends AppCompatDialogFragment {
                 for(int i=0;i<checkedAreas.length;i++){
                     boolean checked=checkedAreas[i];
                     if(checked){
-                        eFocusArea.setText(aList.get(i)+" ");
+                        eFocusArea.setText(aList.get(i) + " ");
                     }else {
-                        //("you must choose one at least");
+                        //error message ("you must choose one at least");
                     }
 
                 }

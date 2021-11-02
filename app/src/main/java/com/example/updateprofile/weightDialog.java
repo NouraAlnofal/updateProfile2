@@ -26,7 +26,7 @@ public class weightDialog extends AppCompatDialogFragment {
         LayoutInflater inflater=getActivity().getLayoutInflater();
         View view= inflater.inflate(R.layout.weight_dialog, null);
 
-        eWeightPicker=view.findViewById(R.id.heightPicker);
+        eWeightPicker=view.findViewById(R.id.weightPicker);
 
         units=view.findViewById(R.id.wUnitPicker);
         units.setMinValue(0);
@@ -44,8 +44,8 @@ public class weightDialog extends AppCompatDialogFragment {
                         break;
 
                     case 1:
-                        eWeightPicker.setMinValue(13);
-                        eWeightPicker.setMaxValue(49);
+                        eWeightPicker.setMinValue(85);
+                        eWeightPicker.setMaxValue(330);
                         break;
 
                 }

@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatDialogFragment;
 
 public class heightDialog extends AppCompatDialogFragment {
     private DialogListener listener;
-    private NumberPicker eHeightcm,eHeightfit,units;
+    private NumberPicker eHeightPicker,units;
     private String[] heightUnits;
 
 
@@ -26,15 +26,30 @@ public class heightDialog extends AppCompatDialogFragment {
         LayoutInflater inflater=getActivity().getLayoutInflater();
         View view= inflater.inflate(R.layout.height_dialog, null);
 
+        eHeightPicker=(NumberPicker) view.findViewById(R.id.heightPicker);
         units=view.findViewById(R.id.hUnitPicker);
         units.setMinValue(0);
         units.setMaxValue(1);
         heightUnits=getResources().getStringArray(R.array.heightUnits);
         units.setDisplayedValues(heightUnits);
 
-        eHeightcm=view.findViewById(R.id.heightPicker);
-        eHeightcm.setMinValue(130);
-        eHeightcm.setMaxValue(195);
+        units.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
+            @Override
+            public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                switch (picker.getValue()){
+                    case 0:
+                        eHeightPicker.setMinValue(140);
+                        eHeightPicker.setMaxValue(195);
+                        break;
+
+                    case 1:
+                        eHeightPicker.setMinValue(4);
+                        eHeightPicker.setMaxValue(6);
+                        break;
+
+                }
+            }
+        });
 
         /*
         eHeightfit=view.findViewById(R.id.heightPicker);
@@ -51,7 +66,7 @@ public class heightDialog extends AppCompatDialogFragment {
                 }).setPositiveButton("ok", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int i) {
-                int pickedValue = eHeightcm.getValue();
+                int pickedValue = eHeightPicker.getValue();
                  StringBuilder sb=new StringBuilder();
                 sb.append(Integer.toString(pickedValue));
                 String hStr=sb.toString();

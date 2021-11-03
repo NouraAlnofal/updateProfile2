@@ -50,9 +50,9 @@ public class areaDialog extends AppCompatDialogFragment {
                     boolean checked=checkedAreas[i];
                     if(checked){
                         eFocusArea.setText(aList.get(i) + " ");
-                    }else {
+                    }/*else {
                         //error message ("you must choose one at least");
-                    }
+                    }*/
 
                 }
 

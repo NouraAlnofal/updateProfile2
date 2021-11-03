@@ -10,10 +10,9 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements nameDialog.DialogListener,
         genderDialog.DialogListener, DB_Dialog.DialogListener, heightDialog.DialogListener,
-        areaDialog.DialogListener, weightDialog.DialogListener,
-        daysDialog.DialogListener,reminderDialog.DialogListener{
+        areaDialog.DialogListener, weightDialog.DialogListener {
 
-    TextView eName, eGender, eDB, eHeight, eWeight, eFocusArea, eReminder,eTrainingDays;
+    TextView eName, eGender, eDB, eHeight, eWeight, eFocusArea, eReminder, eTrainingDays;
     Button updateProfile;
 
     @Override
@@ -21,22 +20,22 @@ public class MainActivity extends AppCompatActivity implements nameDialog.Dialog
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        eName=(TextView) findViewById(R.id.editName);
-        eGender=(TextView) findViewById(R.id.editGender);
-        eDB=(TextView) findViewById(R.id.editBD);
-        eHeight=(TextView) findViewById(R.id.editHeight);
-        eWeight=(TextView) findViewById(R.id.editWeight);
-        eFocusArea=(TextView) findViewById(R.id.editFocusArea);
-        eReminder=(TextView) findViewById(R.id.editReminder);
-        eTrainingDays=(TextView) findViewById(R.id.editTrainingDays);
-        updateProfile=(Button) findViewById(R.id.updateProfileB);
+        eName = (TextView) findViewById(R.id.editName);
+        eGender = (TextView) findViewById(R.id.editGender);
+        eDB = (TextView) findViewById(R.id.editBD);
+        eHeight = (TextView) findViewById(R.id.editHeight);
+        eWeight = (TextView) findViewById(R.id.editWeight);
+        eFocusArea = (TextView) findViewById(R.id.editFocusArea);
+        eReminder = (TextView) findViewById(R.id.editReminder);
+        eTrainingDays = (TextView) findViewById(R.id.editTrainingDays);
+        updateProfile = (Button) findViewById(R.id.updateProfileB);
 
 
         eName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                 openNameDialog();
+                openNameDialog();
             }
 
 
@@ -92,107 +91,108 @@ public class MainActivity extends AppCompatActivity implements nameDialog.Dialog
 
         });
 
-        eReminder.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                openReminderDialog();
-            }
-
-
-        });
-
-        eTrainingDays.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                openDaysDialog();
-            }
-
-
-        });
+//        eReminder.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                openReminderDialog();
+//            }
+//
+//
+//        });
+//
+//        eTrainingDays.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                openDaysDialog();
+//            }
+//
+//
+//        });
     }
 
-    public void openNameDialog(){
-        nameDialog eName=new nameDialog();
-        eName.show(getSupportFragmentManager(),"Name");
+    public void openNameDialog() {
+        nameDialog eName = new nameDialog();
+        eName.show(getSupportFragmentManager(), "Name");
     }
 
-    public void openGenderDialog(){
-        genderDialog eGender=new genderDialog();
-        eGender.show(getSupportFragmentManager(),"Gender");
+    public void openGenderDialog() {
+        genderDialog eGender = new genderDialog();
+        eGender.show(getSupportFragmentManager(), "Gender");
     }
 
-    public void openDB_Dialog(){
-        DB_Dialog eDB=new DB_Dialog();
-        eDB.show(getSupportFragmentManager(),"DB");
+    public void openDB_Dialog() {
+        DB_Dialog eDB = new DB_Dialog();
+        eDB.show(getSupportFragmentManager(), "DB");
     }
 
-    public void openHeightDialog(){
-        heightDialog eHeight=new heightDialog();
-        eHeight.show(getSupportFragmentManager(),"Height");
+    public void openHeightDialog() {
+        heightDialog eHeight = new heightDialog();
+        eHeight.show(getSupportFragmentManager(), "Height");
     }
 
-    public void openWeightDialog(){
-        weightDialog eWeight=new weightDialog();
-        eWeight.show(getSupportFragmentManager(),"Weight");
+    public void openWeightDialog() {
+        weightDialog eWeight = new weightDialog();
+        eWeight.show(getSupportFragmentManager(), "Weight");
     }
 
-    public void openAreaDialog(){
-        areaDialog eFocusArea=new areaDialog();
-        eFocusArea.show(getSupportFragmentManager(),"Area");
+    public void openAreaDialog() {
+        areaDialog eFocusArea = new areaDialog();
+        eFocusArea.show(getSupportFragmentManager(), "Area");
     }
 
-    public void openReminderDialog(){
-        reminderDialog eReminder=new reminderDialog();
-        eReminder.show(getSupportFragmentManager(),"Reminder");
-    }
+//    public void openReminderDialog(){
+//        reminderDialog eReminder=new reminderDialog();
+//        eReminder.show(getSupportFragmentManager(),"Reminder");
+//    }
+//
+//    public void openDaysDialog(){
+//        daysDialog eTrainingDays=new daysDialog();
+//        eTrainingDays.show(getSupportFragmentManager(),"Training Days");
+//    }
 
-    public void openDaysDialog(){
-        daysDialog eTrainingDays=new daysDialog();
-        eTrainingDays.show(getSupportFragmentManager(),"Training Days");
-    }
-
-    public void applyNameText(String name){
+    public void applyNameText(String name) {
         eName.setText(name);
 
     }
 
-    public void applyGenderText(String gender){
+    public void applyGenderText(String gender) {
         eGender.setText(gender);
 
     }
 
-    public void applyDBText(String DB){
+    public void applyDBText(String DB) {
         eDB.setText(DB);
 
     }
 
-    public void applyHeightText(String height){
+    public void applyHeightText(String height) {
         eHeight.setText(height);
 
     }
 
 
-    public void applyWeightText(String weight){
+    public void applyWeightText(String weight) {
         eWeight.setText(weight);
 
     }
 
-    public void applyAreaText(String area){
+    public void applyAreaText(String area) {
         eFocusArea.setText(area);
 
     }
 
-    public void applyReminderText(String reminder){
-        eReminder.setText(reminder);
+//    public void applyReminderText(String reminder){
+//        eReminder.setText(reminder);
+//
+//    }
+//
+//    public void applyDaysText(String days){
+//        eTrainingDays.setText(days);}
 
-    }
 
-    public void applyDaysText(String days){
-        eTrainingDays.setText(days);
 
-    }
 
     public void onClick(View view) {
     }

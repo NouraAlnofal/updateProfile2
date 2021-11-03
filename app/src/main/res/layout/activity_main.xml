@@ -10,8 +10,53 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="-295dp">
+        tools:layout_editor_absoluteX="-29dp"
+        tools:layout_editor_absoluteY="-251dp">
+
+        <TextView
+            android:id="@+id/tHeight"
+            android:layout_width="99dp"
+            android:layout_height="45dp"
+            android:text="Height"
+            android:textAlignment="viewStart"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.051"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.437" />
+
+        <TextView
+            android:id="@+id/tWeight"
+            android:layout_width="99dp"
+            android:layout_height="45dp"
+            android:text="Weight"
+            android:textAlignment="viewStart"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.051"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.517" />
+
+        <TextView
+            android:id="@+id/tBD"
+            android:layout_width="99dp"
+            android:layout_height="45dp"
+            android:text="Birthday "
+            android:textAlignment="viewStart"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.051"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.36" />
 
         <Button
             android:id="@+id/updateProfileB"
@@ -30,7 +75,7 @@
 
         <TextView
             android:id="@+id/editName"
-            android:layout_width="267dp"
+            android:layout_width="281dp"
             android:layout_height="45dp"
             android:clickable="true"
             android:onClick="onClick"
@@ -38,14 +83,14 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.916"
+            app:layout_constraintHorizontal_bias="0.907"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.209" />
+            app:layout_constraintVertical_bias="0.206" />
 
         <TextView
             android:id="@+id/editBD"
-            android:layout_width="267dp"
+            android:layout_width="281dp"
             android:layout_height="45dp"
             android:layout_marginTop="20dp"
             android:clickable="true"
@@ -54,28 +99,14 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.916"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editGender"
-            app:layout_constraintVertical_bias="0.012" />
-
-        <EditText
-            android:id="@+id/tBD"
-            android:layout_width="109dp"
-            android:layout_height="45dp"
-            android:ems="6"
-            android:inputType="textPersonName"
-            android:text="Birthday"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintHorizontal_bias="0.907"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.412" />
+            app:layout_constraintVertical_bias="0.34" />
 
         <TextView
             android:id="@+id/editFocusArea"
-            android:layout_width="267dp"
+            android:layout_width="281dp"
             android:layout_height="45dp"
             android:clickable="true"
             android:onClick="onClick"
@@ -83,14 +114,44 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.911"
+            app:layout_constraintHorizontal_bias="0.907"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editWeight"
-            app:layout_constraintVertical_bias="0.118" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.593" />
+
+        <TextView
+            android:id="@+id/editReminder"
+            android:layout_width="281dp"
+            android:layout_height="45dp"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:textAlignment="viewEnd"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.907"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.672" />
+
+        <TextView
+            android:id="@+id/editTrainingDays"
+            android:layout_width="281dp"
+            android:layout_height="45dp"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:textAlignment="viewEnd"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.907"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.75" />
 
         <TextView
             android:id="@+id/editGender"
-            android:layout_width="267dp"
+            android:layout_width="281dp"
             android:layout_height="45dp"
             android:layout_marginTop="24dp"
             android:clickable="true"
@@ -99,14 +160,14 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.916"
+            app:layout_constraintHorizontal_bias="0.907"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editName"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.255" />
 
         <TextView
             android:id="@+id/editHeight"
-            android:layout_width="267dp"
+            android:layout_width="281dp"
             android:layout_height="45dp"
             android:layout_marginTop="25dp"
             android:clickable="true"
@@ -115,14 +176,14 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.916"
+            app:layout_constraintHorizontal_bias="0.907"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editBD"
-            app:layout_constraintVertical_bias="0.015" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.416" />
 
         <TextView
             android:id="@+id/editWeight"
-            android:layout_width="267dp"
+            android:layout_width="281dp"
             android:layout_height="45dp"
             android:clickable="true"
             android:onClick="onClick"
@@ -130,80 +191,85 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.916"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editHeight"
-            app:layout_constraintVertical_bias="0.084" />
-
-        <EditText
-            android:id="@+id/tGender"
-            android:layout_width="109dp"
-            android:layout_height="45dp"
-            android:ems="6"
-            android:inputType="textPersonName"
-            android:text="Gender"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintHorizontal_bias="0.907"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.31" />
+            app:layout_constraintVertical_bias="0.517" />
 
-        <EditText
+        <TextView
             android:id="@+id/tName"
-            android:layout_width="109dp"
+            android:layout_width="99dp"
             android:layout_height="45dp"
-            android:ems="6"
-            android:inputType="textPersonName"
             android:text="Name"
+            android:textAlignment="viewStart"
+            android:textColor="#000000"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintHorizontal_bias="0.051"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.209" />
+            app:layout_constraintVertical_bias="0.205" />
 
-        <EditText
-            android:id="@+id/tHeight"
-            android:layout_width="109dp"
+        <TextView
+            android:id="@+id/tReminer"
+            android:layout_width="99dp"
             android:layout_height="45dp"
-            android:ems="6"
-            android:inputType="textPersonName"
-            android:text="Weight"
+            android:text="Reminder"
+            android:textAlignment="viewStart"
+            android:textColor="#000000"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintHorizontal_bias="0.051"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.622" />
+            app:layout_constraintVertical_bias="0.672" />
 
-        <EditText
-            android:id="@+id/tWeight"
-            android:layout_width="109dp"
+        <TextView
+            android:id="@+id/tTrainingDays"
+            android:layout_width="99dp"
             android:layout_height="45dp"
-            android:ems="6"
-            android:inputType="textPersonName"
-            android:text="Height"
+            android:text="Training days"
+            android:textAlignment="viewStart"
+            android:textColor="#000000"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintHorizontal_bias="0.051"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.521" />
+            app:layout_constraintVertical_bias="0.75" />
 
-        <EditText
-            android:id="@+id/tFocusArea"
-            android:layout_width="109dp"
+        <TextView
+            android:id="@+id/tFocusArea2"
+            android:layout_width="99dp"
             android:layout_height="45dp"
-            android:ems="6"
-            android:inputType="textPersonName"
             android:text="Focus Areas"
+            android:textAlignment="viewStart"
+            android:textColor="#000000"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintHorizontal_bias="0.051"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.727" />
+            app:layout_constraintVertical_bias="0.593" />
+
+        <TextView
+            android:id="@+id/tGender"
+            android:layout_width="99dp"
+            android:layout_height="45dp"
+            android:text="Gender"
+            android:textAlignment="viewStart"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.051"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.281" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

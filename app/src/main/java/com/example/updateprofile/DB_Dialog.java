@@ -21,13 +21,13 @@ public class DB_Dialog extends AppCompatDialogFragment {
         LayoutInflater inflater=getActivity().getLayoutInflater();
         View view= inflater.inflate(R.layout.db_dialog, null);
 
-        eDB=view.findViewById(R.id.editBD);
+        eDB=view.findViewById(R.id.eDB);
         int dobYear = eDB.getYear();
         int dobMonth = eDB.getMonth();
         int dobDate = eDB.getDayOfMonth();
         StringBuilder sb=new StringBuilder();
         sb.append(Integer.toString(dobYear)).append("-").append(Integer.toString(dobMonth)).append("-")
-                .append(Integer.toString(dobDate)).append(" 00:00:00");
+                .append(Integer.toString(dobDate));
 
         builder.setView(view)
                 .setTitle("birthday date")

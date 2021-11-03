@@ -19,11 +19,11 @@ public class areaDialog extends AppCompatDialogFragment {
     public Dialog onCreateDialog( Bundle savedInstanceState) {
         AlertDialog.Builder builder=new AlertDialog.Builder(getActivity());
        /* LayoutInflater inflater=getActivity().getLayoutInflater();
-        View view= inflater.inflate(R.layout.area_dialog, null);
-*/
+        View view= inflater.inflate(R.layout.area_dialog, null);*/
         String[] focusAreas=new String[]{"core","chest","Back","Arm","shoulder","leg","Glue"};
         boolean[]checkedAreas=new boolean[]{false,false,false,false,false,false,false};
         final List<String> aList= Arrays.asList(focusAreas);
+        //eFocusArea= view.findViewById(R.id.editFocusArea);
 
 
        // builder.setView(view)
@@ -49,7 +49,7 @@ public class areaDialog extends AppCompatDialogFragment {
                 for(int i=0;i<checkedAreas.length;i++){
                     boolean checked=checkedAreas[i];
                     if(checked){
-                        eFocusArea.setText(aList.get(i) + " ");
+                        eFocusArea.setText(new StringBuilder().append(aList.get(i)).append(" ").toString());
                     }/*else {
                         //error message ("you must choose one at least");
                     }*/
@@ -59,7 +59,7 @@ public class areaDialog extends AppCompatDialogFragment {
 
             }
         });
-       // eFocusArea=view.findViewById(R.id.editFocusArea);
+       //
         return builder.create();
     }
 

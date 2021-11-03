@@ -15,6 +15,7 @@ public class weightDialog extends AppCompatDialogFragment {
     private DialogListener listener;
     private NumberPicker eWeightPicker,units;
     private String[] weightUnits;
+    private String pickedUnit = "Kg";
 
 
     @Override
@@ -31,6 +32,10 @@ public class weightDialog extends AppCompatDialogFragment {
         weightUnits=getResources().getStringArray(R.array.weightUnits);
         units.setDisplayedValues(weightUnits);
 
+        eWeightPicker.setMinValue(39);
+        eWeightPicker.setMaxValue(150);
+
+
         units.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
             @Override
             public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
@@ -38,14 +43,17 @@ public class weightDialog extends AppCompatDialogFragment {
                     case 0:
                         eWeightPicker.setMinValue(39);
                         eWeightPicker.setMaxValue(150);
+                         pickedUnit = "Kg";
                         break;
 
                     case 1:
                         eWeightPicker.setMinValue(85);
                         eWeightPicker.setMaxValue(330);
+                         pickedUnit = "lbs";
                         break;
 
                 }
+
             }
         });
 
@@ -62,7 +70,7 @@ public class weightDialog extends AppCompatDialogFragment {
             public void onClick(DialogInterface dialog, int i) {
                 int pickedValue = eWeightPicker.getValue();
                 StringBuilder sb=new StringBuilder();
-                sb.append(Integer.toString(pickedValue));
+                sb.append(Integer.toString(pickedValue)).append(pickedUnit);
                 String wStr=sb.toString();
                 listener.applyWeightText(wStr);
 

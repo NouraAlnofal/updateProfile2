@@ -15,6 +15,7 @@ public class heightDialog extends AppCompatDialogFragment {
     private DialogListener listener;
     private NumberPicker eHeightPicker,units;
     private String[] heightUnits;
+    private String pickedUnit = "cm";
 
 
     @Override
@@ -30,6 +31,9 @@ public class heightDialog extends AppCompatDialogFragment {
         heightUnits=getResources().getStringArray(R.array.heightUnits);
         units.setDisplayedValues(heightUnits);
 
+        eHeightPicker.setMinValue(140);
+        eHeightPicker.setMaxValue(195);
+
         units.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
             @Override
             public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
@@ -37,11 +41,13 @@ public class heightDialog extends AppCompatDialogFragment {
                     case 0:
                         eHeightPicker.setMinValue(140);
                         eHeightPicker.setMaxValue(195);
+                        pickedUnit="cm";
                         break;
 
                     case 1:
                         eHeightPicker.setMinValue(4);
                         eHeightPicker.setMaxValue(6);
+                        pickedUnit="fit";
                         break;
 
                 }
@@ -62,7 +68,7 @@ public class heightDialog extends AppCompatDialogFragment {
             public void onClick(DialogInterface dialog, int i) {
                 int pickedValue = eHeightPicker.getValue();
                  StringBuilder sb=new StringBuilder();
-                sb.append(Integer.toString(pickedValue));
+                sb.append(Integer.toString(pickedValue)).append(pickedUnit);
                 String hStr=sb.toString();
                  listener.applyHeightText(hStr);
 
